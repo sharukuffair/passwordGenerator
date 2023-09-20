@@ -24,19 +24,30 @@
           />
           <button>
             <span data-copyMsg></span>
+            <img
+              src="Assets/copy-btn.svg"
+              alt="copy-btn"
+              width="23px"
+              height="23px"
+            />
           </button>
+        </div>
+        <div class="input-container">
+          <div class="length-container">
+            <p>Password Length</p>
+            <p data-lengthNumber>0</p>
+          </div>
+          <input
+            type="range"
+            min="1"
+            max="20"
+            step="1"
+            class="slider"
+            data-lengthSlider
+          />
         </div>
       </div>
     </div>
-    <!-- icon pack -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
     <!-- script -->
     <script src="app.js"></script>
   </body>
