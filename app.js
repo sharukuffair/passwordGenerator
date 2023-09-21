@@ -15,10 +15,12 @@ let password = "";
 let passwordLength = 10;
 let checkCount = 1;
 
+handleSlider();
+
 //set passwordLength
 function handleSlider() {
   inputSlider.value = passwordLength;
-  lengthDisplay.textContent = passwordLength;
+  lengthDisplay.innerHTML = passwordLength;
 }
 
 // set indicator
@@ -31,5 +33,37 @@ function setIndicator(color) {
 function getRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
-let test = getRandomInteger(1, 10);
-console.log(test);
+
+function getRandomNumber() {
+  return getRandomInteger(0, 9);
+}
+
+function generateLowercase() {
+  return String.fromCharCode(getRandomInteger(97, 122));
+}
+
+function generateUppercase() {
+  return String.fromCharCode(getRandomInteger(65, 90));
+}
+
+function generateSymbols() {
+  return String.fromCharCode(getRandomInteger(33, 47));
+}
+
+function calcStrength() {
+  let hasUpper = false;
+  let hasLower = false;
+  let hasNumber = false;
+  let hasSymbol = false;
+
+  if (uppercaseCheck.checked) hasUpper = true;
+  if (lowercaseCheck.checked) hasLower = true;
+  if (numberCheck.checked) hasNumber = true;
+  if (symbolCheck.checked) hasSymbol = true;
+
+  if (hasUpper && hasLower && hasNumber && hasSymbol && passwordLength >= 8) {
+    setIndicator("#0f0");
+  } else if (hasUpper && hasLower && hasNumber && passwordLength >= 6) {
+    setIndicator("#ff0");
+  }
+}
