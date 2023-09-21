@@ -65,5 +65,7 @@ function calcStrength() {
     setIndicator("#0f0");
   } else if (hasUpper && hasLower && hasNumber && passwordLength >= 6) {
     setIndicator("#ff0");
+  } else {
+    setIndicator("#f00");
   }
 }
