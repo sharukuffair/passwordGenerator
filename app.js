@@ -69,3 +69,31 @@ function calcStrength() {
     setIndicator("#f00");
   }
 }
+
+async function copyContent() {
+  try {
+    await navigator.clipboard.writeText(passwordDisplay.value);
+    copyMsg.textContent = "copied";
+  } catch (e) {
+    copyMsg.textContent = "failed";
+    console.log(e);
+  }
+  // to make it visible
+  copyMsg.classList.add("active");
+
+  // to remove after 2 sec
+  setTimeout(() => {
+    copyMsg.classList.remove("active");
+  }, 2000);
+}
+
+inputSlider.addEventListener("input", (e) => {
+  passwordLength = e.target.value;
+  handleSlider();
+});
+
+copyBtn.addEventListener("click", () => {
+  if (passwordDisplay.value) {
+    copyContent();
+  }
+});
