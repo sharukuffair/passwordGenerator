@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Recursive:wght@300;400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +8,12 @@
 :root {
   --main-theme-1: #000000;
   --main-theme-2: #ffffff;
+  --black-text-1: #1a1a1a;
 }
 body {
-  font-family: "Rubik", sans-serif;
+  /* font-family: "Courier Prime", monospace; */
+  font-family: "Recursive", sans-serif;
+  user-select: none;
 }
 .container {
   width: 100vw;
@@ -19,4 +23,17 @@ body {
   justify-content: center;
   flex-direction: column;
   background-color: var(--main-theme-2);
+}
+
+h1 {
+  color: var(--black-text-1);
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 1.2;
+}
+.display-container {
+  position: relative;
+  border-radius: 1rem;
+  background: #e6e6e6;
+  box-shadow: 10px 10px 15px #bdbdbd, -10px -10px 15px #ffffff;
 }
