@@ -12,67 +12,66 @@
     />
   </head>
   <body>
-    <div id="wrapper">
-      <div class="container">
-        <h1>PASSWORD GENERATOR</h1>
-        <div class="display-container">
-          <input
-            readonly
-            placeholder="Password"
-            class="display"
-            data-passwordDisplay
+    <div class="container">
+      <h1>PASSWORD GENERATOR</h1>
+      <div class="display-container">
+        <input
+          readonly
+          placeholder="Password"
+          class="display"
+          data-passwordDisplay
+        />
+        <button data-copy>
+          <span data-copyMsg></span>
+          <img
+            src="Assets/copy-btn.svg"
+            alt="copy-btn"
+            width="23px"
+            height="23px"
           />
-          <button data-copy>
-            <span data-copyMsg></span>
-            <img
-              src="Assets/copy-btn.svg"
-              alt="copy-btn"
-              width="23px"
-              height="23px"
-            />
-          </button>
+        </button>
+      </div>
+      <div class="input-container">
+        <div class="length-container">
+          <p>Password Length</p>
+          <p data-lengthNumber>0</p>
         </div>
-        <div class="input-container">
-          <div class="length-container">
-            <p>Password Length</p>
-            <p data-lengthNumber>0</p>
-          </div>
-          <!-- slider -->
-          <input
-            type="range"
-            min="1"
-            max="20"
-            step="1"
-            class="slider"
-            data-lengthSlider
-          />
-          <!-- checkbox -->
-          <div>
-            <input type="checkbox" id="uppercase" />
-            <label for="uppercase">Include Uppercase Letters</label>
-          </div>
-          <div>
-            <input type="checkbox" id="lowercase" />
-            <label for="lowercase">Include Lowercase Letters</label>
-          </div>
-          <div>
-            <input type="checkbox" id="numbers" />
-            <label for="numbers">Include Numbers</label>
-          </div>
-          <div>
-            <input type="checkbox" id="symbols" />
-            <label for="symbols">Include Symbols</label>
-          </div>
-          <!-- strength container -->
-          <div class="strength-container">
-            <p>Strength</p>
-            <div data-indicator></div>
-          </div>
-          <!-- password generator -->
-          <button class="generate-btn">GENERATE PASSWORD</button>
+        <!-- slider -->
+        <input
+          type="range"
+          min="1"
+          max="20"
+          step="1"
+          class="slider"
+          data-lengthSlider
+        />
+        <!-- checkbox -->
+        <div>
+          <input type="checkbox" id="uppercase" />
+          <label for="uppercase">Include Uppercase Letters</label>
         </div>
+        <div>
+          <input type="checkbox" id="lowercase" />
+          <label for="lowercase">Include Lowercase Letters</label>
+        </div>
+        <div>
+          <input type="checkbox" id="numbers" />
+          <label for="numbers">Include Numbers</label>
+        </div>
+        <div>
+          <input type="checkbox" id="symbols" />
+          <label for="symbols">Include Symbols</label>
+        </div>
+        <!-- strength container -->
+        <div class="strength-container">
+          <p>Strength</p>
+          <div data-indicator></div>
+        </div>
+        <!-- password generator -->
+        <button class="generate-btn">GENERATE PASSWORD</button>
       </div>
     </div>
+
     <!-- script -->
     <script src="app.js"></script>
   </body>
