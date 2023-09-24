@@ -23,10 +23,11 @@
       <div class="display-container">
         <input
           readonly
-          placeholder="Password"
+          placeholder="PASSWORD"
           class="display"
           data-passwordDisplay
         />
+
         <button data-copy>
           <span data-copyMsg></span>
           <img
@@ -52,26 +53,26 @@
           data-lengthSlider
         />
         <!-- checkbox -->
-        <div>
+        <div class="check">
           <input type="checkbox" id="uppercase" />
           <label for="uppercase">Uppercase Letters</label>
         </div>
-        <div>
+        <div class="check">
           <input type="checkbox" id="lowercase" />
           <label for="lowercase">Lowercase Letters</label>
         </div>
-        <div>
+        <div class="check">
           <input type="checkbox" id="numbers" />
           <label for="numbers">Numbers</label>
         </div>
-        <div>
+        <div class="check">
           <input type="checkbox" id="symbols" />
           <label for="symbols">Symbols</label>
         </div>
         <!-- strength container -->
         <div class="strength-container">
           <p>Strength</p>
-          <div data-indicator></div>
+          <div data-indicator class="indicator"></div>
         </div>
         <!-- password generator -->
         <button class="generate-btn">GENERATE PASSWORD</button>

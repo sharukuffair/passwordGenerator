@@ -16,17 +16,23 @@ let passwordLength = 10;
 let checkCount = 0;
 
 handleSlider();
+setIndicator("#ccc");
 
 //set passwordLength
 function handleSlider() {
   inputSlider.value = passwordLength;
   lengthDisplay.innerHTML = passwordLength;
+  const min = inputSlider.min;
+  const max = inputSlider.max;
+  inputSlider.style.backgroundSize =
+    ((passwordLength - min) * 100) / (max - min) + "% 1000%";
 }
 
 // set indicator
 function setIndicator(color) {
   indicator.style.backgroundColor = color;
   //   set shadow
+  indicator.style.boxShadow = `0px 0px 12px 1px ${color}`;
 }
 
 // generate random number
