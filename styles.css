@@ -23,6 +23,7 @@ body {
   justify-content: center;
   flex-direction: column;
   background-color: var(--main-theme-2);
+  position: relative;
 }
 .container {
   width: 90%;
@@ -203,4 +204,23 @@ h1 {
   background-color: var(--main-theme-1);
   cursor: pointer;
   margin-top: -3px;
+}
+
+.dev-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  bottom: 3%;
+  right: 5%;
+}
+.dev-container > p {
+  font-size: 0.9rem;
+  color: var(--black-text-2);
+}
+.dev-container > a > img {
+  width: 50px;
+  aspect-ratio: 3;
+  transform: translateY(3px);
 }
