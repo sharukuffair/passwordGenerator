@@ -66,7 +66,7 @@ h1 {
   font-size: 26px;
 }
 
-.copy-message {
+.copy-btn.active {
   position: absolute;
   top: -130%;
   left: -70%;
@@ -76,9 +76,6 @@ h1 {
   font-size: 0.8rem;
   border-radius: 1rem;
   visibility: none;
-}
-.active {
-  visibility: visible;
 }
 
 .display {
