@@ -55,13 +55,30 @@ h1 {
   border-bottom: 0.25rem solid #666666;
   margin: 0.5rem 0;
 }
-
 .copy-btn {
-  border: none;
   cursor: pointer;
+  color: var(--main-theme-1);
+  position: relative;
+  transition: all 0.4s ease-in;
 }
-.copy-btn img {
-  color: yellow;
+
+.icon-copy {
+  font-size: 26px;
+}
+
+.copy-message {
+  position: absolute;
+  top: -130%;
+  left: -70%;
+  background-color: var(--main-theme-1);
+  color: var(--main-theme-2);
+  padding: 0.6rem;
+  font-size: 0.8rem;
+  border-radius: 1rem;
+  visibility: none;
+}
+.active {
+  visibility: visible;
 }
 
 .display {
@@ -89,7 +106,7 @@ h1 {
   font-family: "Recursive", sans-serif;
 }
 
-.display-container > button {
+.display-container > div {
   position: absolute;
   top: 50%;
   right: 1.5rem;

@@ -28,15 +28,10 @@
           data-passwordDisplay
         />
 
-        <button data-copy class="copy-btn">
-          <span data-copyMsg></span>
-          <img
-            src="Assets/copy-btn.svg"
-            alt="copy-btn"
-            width="23px"
-            height="23px"
-          />
-        </button>
+        <div data-copy class="copy-btn">
+          <span data-copyMsg class="copy-message"></span>
+          <ion-icon name="copy-outline" class="icon-copy"></ion-icon>
+        </div>
       </div>
       <div class="input-container">
         <div class="length-container">
@@ -85,7 +80,15 @@
         </a>
       </div>
     </div>
-
+    <!-- icon pack -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <!-- script -->
     <script src="app.js"></script>
   </body>
