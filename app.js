@@ -25,7 +25,7 @@ function handleSlider() {
   const min = inputSlider.min;
   const max = inputSlider.max;
   inputSlider.style.backgroundSize =
-    ((passwordLength - min) * 100) / (max - min) + "% 1000%";
+    ((passwordLength - min) * 100) / (max - min) + "% 100%";
 }
 
 // set indicator
