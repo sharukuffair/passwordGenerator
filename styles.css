@@ -56,6 +56,14 @@ h1 {
   margin: 0.5rem 0;
 }
 
+.copy-btn {
+  border: none;
+  cursor: pointer;
+}
+.copy-btn img {
+  color: yellow;
+}
+
 .display {
   width: 100%;
   background-color: transparent;
