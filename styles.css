@@ -12,7 +12,6 @@
   --black-text-2: #333333;
 }
 body {
-  /* font-family: "Courier Prime", monospace; */
   font-family: "Recursive", sans-serif;
   user-select: none;
   width: 100vw;
@@ -52,6 +51,8 @@ h1 {
   background-color: var(--main-theme-2);
   border-radius: 1rem;
   border-top: 2px solid #666666;
+  border-left: 1px solid #666666;
+  border-right: 1px solid #666666;
   border-bottom: 0.25rem solid #666666;
   margin: 0.5rem 0;
 }
@@ -59,23 +60,28 @@ h1 {
   cursor: pointer;
   color: var(--main-theme-1);
   position: relative;
-  transition: all 0.4s ease-in;
 }
 
 .icon-copy {
   font-size: 26px;
 }
-
-.copy-btn.active {
+.copy-message {
   position: absolute;
-  top: -130%;
-  left: -70%;
-  background-color: var(--main-theme-1);
-  color: var(--main-theme-2);
-  padding: 0.6rem;
+  top: -90%;
+  left: -60%;
   font-size: 0.8rem;
+  color: var(--main-theme-2);
+  background-color: var(--black-text-2);
+  padding: 0.3rem 0.5rem;
   border-radius: 1rem;
-  visibility: none;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: bottom;
+  transition: all 250ms ease-in-out;
+}
+.copy-message.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .display {
@@ -114,8 +120,10 @@ h1 {
   width: 100%;
   background-color: var(--main-theme-2);
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 1.2rem;
   border-top: 2px solid #666666;
+  border-left: 1px solid #666666;
+  border-right: 1px solid #666666;
   border-bottom: 0.25rem solid #666666;
 }
 .length-container {
@@ -163,10 +171,6 @@ h1 {
   border: none;
   font-family: "Recursive", sans-serif;
   border-bottom: 0.25rem solid #666666;
-}
-.generate-btn:hover {
-  background-color: var(--main-theme-2);
-  color: var(--main-theme-1);
 }
 
 .check {
