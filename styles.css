@@ -55,7 +55,6 @@ h1 {
   border-right: 1px solid #666666;
   border-bottom: 0.25rem solid #666666;
   margin: 0.5rem 0;
-  user-select: none;
 }
 .copy-btn {
   cursor: pointer;
@@ -97,6 +96,7 @@ h1 {
   letter-spacing: 1px;
   padding: 1.2rem 1rem;
   padding-right: 3.25rem;
+  user-select: none;
 }
 .display::placeholder {
   position: absolute;
